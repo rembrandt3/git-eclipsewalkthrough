@@ -61,6 +61,44 @@ public class IO {
 			}
 		}
 	}
+	
+	/**
+	 * Lieﬂt ein eindimesionales Array von Ganzzahlen von der Konsole ein.
+	 * @return Ein eindimesionales Arry.
+	 * @throws IOException
+	 */
+	public static int[] readIntergerArray1D() throws IOException {
+		System.out.println("Wie viele Werte? ");
+		int zeilen = readInteger();
+		int[] array = readIntergerArray1D(zeilen);
+		return array;
+	}
+	/**
+	 * Lieﬂt ein eindimesionales Array von Ganzzahlen von der Konsole ein.
+	 * @param anzahlWerte Die Anzahl der Array Elemente
+	 * @return Ein eindimesionales Arry.
+	 * @throws IOException
+	 */
+	public static int[] readIntergerArray1D(int anzahlWerte) throws IOException {
+		int[] array = new int [anzahlWerte];
+		array = readIntergerArray1D(array);
+		return array;
+	}
+	/**
+	 * Lieﬂt ein eindimesionales Array von Ganzzahlen von der Konsole ein.
+	 * @param array Das zu f¸llende Array.
+	 * @return Ein eindimesionales Arry.
+	 * @throws IOException
+	 */
+	public static int[] readIntergerArray1D(int[] array) throws IOException {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("Wert eingeben f¸r [" + i + "]: ");
+			array[i] = readInteger();
+			
+			
+		}
+		return array;
+	}
 
 }
 
